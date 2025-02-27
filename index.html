@@ -135,13 +135,15 @@
             Sustainable Joy is about bringing people together to create real change—one act of kindness, one shared moment, one connection at a time.
             Join us in building a more generous, sustainable, and joyful community.
           </p>
-          <div class="mt-6 flex max-w-md gap-x-4">
+          <form id="emailForm" class="mt-6 flex max-w-md gap-x-4">
             <label for="email-address" class="sr-only">Email address</label>
-            <input id="email-address" name="email" type="email" autocomplete="email" required class="flex-auto rounded-md bg-lime-300/20 px-4 py-2 text-white placeholder-lime-100 focus:ring-2 focus:ring-lime-300 focus:outline-none" placeholder="Enter your email">
+            <input id="email-address" name="email" type="email" autocomplete="email" required 
+              class="flex-auto rounded-md bg-lime-300/20 px-4 py-2 text-white placeholder-lime-100 focus:ring-2 focus:ring-lime-300 focus:outline-none" 
+              placeholder="Enter your email">
             <button type="submit" class="flex-none rounded-md bg-lime-300 px-4 py-2.5 text-sm font-semibold text-pink-700 shadow-md hover:bg-lime-200 transition">
               Sign Up
             </button>
-          </div>
+          </form>
         </div>
         <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
           <div class="flex flex-col items-start">
@@ -202,6 +204,6 @@
   
   <!-- Load scripts.js as a module -->
   <script type="module" src="scripts.js"></script>
-  
+
   </body>
   
