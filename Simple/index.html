@@ -5,70 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable Joy</title>
-
+  
     <!-- Meta Tags for SEO & Social Sharing -->
-    <meta name="description"
-        content="Sustainable Joy is a new community in Los Angeles, rooted in giving, connection, and sustainability. Join us today!">
+    <meta name="description" content="Sustainable Joy is a new community in Los Angeles, rooted in giving, connection, and sustainability. Join us today!">
     <meta name="keywords" content="Sustainable Joy, community, giving, sustainability, Los Angeles">
     <meta name="author" content="Sustainable Joy">
-
+  
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sustainable Joy">
-    <meta property="og:description"
-        content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
-    <meta property="og:image"
-        content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
+    <meta property="og:description" content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
     <meta property="og:url" content="https://sustainablejoy.org">
-
+  
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sustainable Joy">
-    <meta name="twitter:description"
-        content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
-    <meta name="twitter:image"
-        content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
-
+    <meta name="twitter:description" content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
+    <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
+  
     <!-- Favicon -->
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG"
-        type="image/png">
-
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG" type="image/png">
+  
     <!-- Tailwind CSS -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script async defer src="https://embeds.every.org/0.4/button.js?explicit=1" id="every-donate-btn-js"></script>
-
+  
     <style>
-        .bg-green {
-            background-color: #068E62;
-        }
+      .bg-green {
+        background-color: #068E62;
+      }
     </style>
-</head>
-
-<body class="bg-green text-white flex flex-col items-center justify-center min-h-screen text-center p-6">
-    <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG"
-        alt="Sustainable Joy Logo" class="w-full max-w-lg md:max-w-2xl mb-6">
-
+  </head>
+  
+  <body class="bg-green text-white flex flex-col items-center justify-center min-h-screen text-center p-6">
+    <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG" alt="Sustainable Joy Logo" class="w-full max-w-lg md:max-w-2xl mb-6">
+  
     <div class="max-w-xl">
-        <h1 class="text-2xl md:text-3xl font-bold mb-4">A new community in Los Angeles!</h1>
-        <p class="text-lg md:text-xl mb-6">Rooted in giving, connection, and sustainability.</p>
+      <h1 class="text-2xl md:text-3xl font-bold mb-4">A new community in Los Angeles!</h1>
+      <p class="text-lg md:text-xl mb-6">Rooted in giving, connection, and sustainability.</p>
     </div>
-
+  
     <form id="emailForm" class="w-full max-w-sm">
-        <input id="email-address" type="email" placeholder="Enter your email"
-            class="bg-white w-full p-3 text-gray-900 rounded-md mb-4 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
-        <button type="submit"
-            class="w-full bg-white text-green-700 font-bold p-3 rounded-md transition hover:bg-gray-200">Join
-            Us</button>
+      <input id="email-address" type="email" placeholder="Enter your email" class="bg-white w-full p-3 text-gray-900 rounded-md mb-4 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
+      <button type="submit" class="w-full bg-white text-green-700 font-bold p-3 rounded-md transition hover:bg-gray-200">Join Us</button>
     </form>
-
+    
+  <!-- People Section -->
+  <div class="mt-10 text-center">
+    <h2 class="text-2xl font-bold mb-6">Help Us Support People in LA</h2>
+    <div class="flex justify-center gap-10">
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/liz_green.png" alt="Liz" 
+          class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
+        <p class="mt-2 text-lg font-semibold">Liz</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/jo_green.png" alt="Jo" 
+          class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
+        <p class="mt-2 text-lg font-semibold">Jo</p>
+      </div>
+    </div>
+  </div>
+  
+  
     <div class="bg-white w-full max-w-sm text-center p-6 rounded-md mt-6">
-        <div id="every-donate-btn">
-            <button class="w-full bg-green text-white font-bold p-3 rounded-md transition hover:bg-green-800">Donate to
-                Sustainable Joy</button>
-        </div>
+      <div id="every-donate-btn">
+        <button class="w-full bg-green text-white font-bold p-3 rounded-md transition hover:bg-green-800">Donate to Sustainable Joy</button>
+      </div>
     </div>
 
     <script type="module" src="scripts.js"></script>
-</body>
+    
+  </body>
 
 </html>
