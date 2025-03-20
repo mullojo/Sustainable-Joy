@@ -1,41 +1,69 @@
-document
-  .getElementById("emailForm")
-  .addEventListener("submit", async (event) => {
+
+///// Email Form Submit /////
+
+document.addEventListener("DOMContentLoaded", () => {
+  const emailInput = document.getElementById("email-address");
+  const submitButton = document.getElementById("submit-button");
+  const formMessage = document.getElementById("form-message");
+
+  // Email validation function
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // Live validation: change input background & enable/disable button
+  emailInput.addEventListener("input", () => {
+    const email = emailInput.value.trim();
+    const valid = isValidEmail(email);
+
+    emailInput.classList.toggle("bg-emerald-200", valid);
+    emailInput.classList.toggle("bg-white", !valid);
+    submitButton.disabled = !valid;
+  });
+
+  document.getElementById("emailForm").addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const emailInput = document.getElementById("email-address");
     const email = emailInput.value.trim();
+    if (!isValidEmail(email)) return; // Extra check for safety
 
-    // Basic validation
-    if (!email || !email.includes("@") || !email.includes(".")) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+    // Disable button while submitting & show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting...";
+    submitButton.classList.add("opacity-50", "cursor-not-allowed");
 
-    // Google Apps Script endpoint (replace with your actual URL)
     const GOOGLE_SCRIPT_URL =
       "https://script.google.com/macros/s/AKfycbwPKcxd8-ZfgmYrdyKuVab7vFzjiua5-ODqPocrKypZvp3VN3ZaaOvb4MO_3YKaygI8/exec";
 
     try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", // Prevents CORS issues
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ email })
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
       });
 
-      // Simple success message (no-cors prevents checking response status)
-      alert("Thanks for signing up! Your email has been saved.");
-      emailInput.value = ""; // Clear input field
+      // Show success message
+      formMessage.textContent = "🎉 Thanks for signing up!";
+      formMessage.classList.replace("opacity-0", "opacity-100");
+
+      emailInput.value = ""; // Clear input
+      emailInput.classList.replace("bg-emerald-200", "bg-white"); // Reset input background
+      submitButton.disabled = true; // Re-disable button since input is now empty
     } catch (error) {
-      alert("Something went wrong. Please try again later.");
+      formMessage.textContent = "❌ Something went wrong. Try again later.";
+      formMessage.classList.replace("opacity-0", "opacity-100");
       console.error("Error:", error);
     }
-  });
 
-//// Every.org Giving Button /////
+    // Reset button state after a short delay
+    setTimeout(() => {
+      submitButton.textContent = "Join Us";
+      submitButton.classList.remove("opacity-50", "cursor-not-allowed");
+    }, 2000);
+  });
+});
+
+
+///// Every.org Giving Button /////
 
 function createWidget() {
   everyDotOrgDonateButton.createWidget({
