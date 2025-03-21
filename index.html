@@ -1,37 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainable Joy</title>
 
   <!-- Meta Tags for SEO & Social Sharing -->
-  <meta name="description"
-    content="Sustainable Joy is a new community in Los Angeles, rooted in giving, connection, and sustainability. Join us today!">
+  <meta name="description" content="Sustainable Joy is a new community in Los Angeles, rooted in giving, connection, and sustainability. Join us today!">
   <meta name="keywords" content="Sustainable Joy, community, giving, sustainability, Los Angeles">
   <meta name="author" content="Sustainable Joy">
 
   <!-- Open Graph (Facebook, LinkedIn, etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sustainable Joy">
-  <meta property="og:description"
-    content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
-  <meta property="og:image"
-    content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
+  <meta property="og:description" content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
   <meta property="og:url" content="https://sustainablejoy.org">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sustainable Joy">
-  <meta name="twitter:description"
-    content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
-  <meta name="twitter:image"
-    content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
+  <meta name="twitter:description" content="Join our new community in Los Angeles, rooted in giving, connection, and sustainability.">
+  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG">
 
   <!-- Favicon -->
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG"
-    type="image/png">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG" type="image/png">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -45,20 +36,64 @@
 </head>
 
 <body class="bg-green text-white flex flex-col items-center justify-center min-h-screen text-center p-6">
-  <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG"
-    alt="Sustainable Joy Logo" class="w-full max-w-lg md:max-w-2xl mb-6">
+  <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Logos/SUSTAINABLE_JOY.PNG" alt="Sustainable Joy Logo" class="w-full max-w-lg md:max-w-2xl mb-6">
+
+  <div id="event-section" class="bg-white w-full max-w-2xl text-center p-8 rounded-lg shadow-md mb-10">
+    <h2 class="text-3xl font-bold text-gray-900 mb-4">Upcoming Launch Event 💚</h2>
+    <p class="text-lg text-emerald-700 mb-6">Join us this 🗓️ Sunday at 12:00 noon!</p>
+
+    <!-- Countdown Timer -->
+    <div id="countdown" class="text-2xl font-bold text-green-700 mb-6"></div>
+
+    <!-- RSVP Button -->
+    <button id="show-details" class="bg-green text-white font-bold py-3 px-6 rounded-lg text-lg transition hover:bg-green-800">
+      See Details & RSVP
+    </button>
+  </div>
+
+  <!-- Event Details Section (Initially Hidden) -->
+  <div id="event-details" class="hidden bg-emerald-50 w-full max-w-2xl text-center p-8 rounded-lg shadow-md mb-10">
+    <p class="text-lg text-emerald-700 mb-6">Join us in Venice, CA for a day of movement, giving, and community!</p>
+
+    <div class="max-w-lg mx-auto bg-white text-emerald-900 p-6 rounded-2xl shadow-xl">
+      <p class="font-semibold text-2xl">📅 Sunday, March 23</p>
+      <p class="font-semibold text-lg">📍 Venice, CA (RSVP for location)</p>
+
+      <div class="mt-5 text-left space-y-4">
+        <p><strong>12:00 Noon</strong> – Check-in & Arrival</p>
+        <p><strong>12:30 PM</strong> – <span class="font-bold">Pilates Fundraiser</span> with Olivia (Kent Wellness Club)</p>
+        <a href="https://www.every.org/sustainable-joy" target="_blank" rel="noopener noreferrer" class="block bg-white text-emerald-700 font-bold py-3 px-6 rounded-lg border-2 border-emerald-700 text-center transition hover:bg-emerald-50">
+          Donate $39 to Attend Pilates Session
+        </a>
+        <p><strong>1:30 PM</strong> – Light bites, tea & founders' story</p>
+        <p><strong>2:30 PM</strong> – Support wildfire-impacted families</p>
+        <p><strong>3:30 PM</strong> – Community gathering & closing</p>
+      </div>
+
+      <div class="mt-6">
+        <a href="https://partiful.com/e/OyhEl06zU7znmOo2u2kf" target="_blank" rel="noopener noreferrer" class="block bg-white text-emerald-700 font-bold py-3 px-6 rounded-lg border-2 border-emerald-700 text-center transition hover:bg-emerald-50">
+          RSVP on Partiful 🎉
+        </a>
+      </div>
+
+      <p class="mt-5 text-sm">Want to volunteer? Text <strong>Alix Newman</strong> at
+        <a href="tel:3109918771" class="text-emerald-600 underline">(310) 991-8771</a>
+      </p>
+    </div>
+
+    <p class="mt-6 text-sm text-emerald-700 opacity-80">Special thanks to Rivian Community Venice for hosting!</p>
+  </div>
+
+  <!-- Intro and Sign Up -->
 
   <div class="max-w-xl">
-    <h1 class="text-2xl md:text-3xl font-bold mb-4">A new community in Los Angeles!</h1>
+    <h1 class="text-2xl md:text-3xl font-bold my-4">A new community in Los Angeles!</h1>
     <p class="text-lg md:text-xl mb-6">Rooted in giving, connection, and sustainability.</p>
   </div>
 
   <form id="emailForm" class="w-full max-w-sm">
-    <input id="email-address" type="email" placeholder="Enter your email"
-      class="bg-white w-full p-3 text-gray-900 rounded-md mb-4 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white transition-colors">
-    <button id="submit-button" type="submit"
-      class="w-full bg-white text-green-700 font-bold p-3 rounded-md transition hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
-      disabled>
+    <input id="email-address" type="email" placeholder="Enter your email" class="bg-white w-full p-3 text-gray-900 rounded-md mb-4 border-2 border-white focus:outline-none focus:ring-2 focus:ring-white transition-colors">
+    <button id="submit-button" type="submit" class="w-full bg-white text-green-700 font-bold p-3 rounded-md transition hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
       Join Us
     </button>
     <p id="form-message" class="mt-3 text-sm text-white text-center opacity-0 transition-opacity"></p>
@@ -69,28 +104,22 @@
     <h2 class="text-2xl font-bold mb-6">Help Us Support People in LA</h2>
     <div class="flex justify-center gap-10">
       <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/liz_green.png" alt="Liz"
-          class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
-        <p class="mt-2 text-lg font-semibold">Liz</p>
+        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/liz_green.png" alt="Liz" class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
+        <p class="mt-2 text-lg font-semibold">Elizabeth Turner</p>
       </div>
       <div class="flex flex-col items-center">
-        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/jo_green.png" alt="Jo"
-          class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
-        <p class="mt-2 text-lg font-semibold">Jo</p>
+        <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/Photos/jo_green.png" alt="Jo" class="w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full border-4 border-white object-cover bg-white">
+        <p class="mt-2 text-lg font-semibold">Johanna Moonan</p>
       </div>
     </div>
   </div>
 
-
   <div class="bg-white w-full max-w-sm text-center p-6 rounded-md mt-6">
     <div id="every-donate-btn">
-      <button class="w-full bg-green text-white font-bold p-3 rounded-md transition hover:bg-green-800">Donate to
-        Sustainable Joy</button>
+      <button class="w-full bg-green text-white font-bold p-3 rounded-md transition hover:bg-green-800">Donate to Sustainable Joy</button>
     </div>
   </div>
 
   <script type="module" src="scripts.js"></script>
 
 </body>
-
-</html>
