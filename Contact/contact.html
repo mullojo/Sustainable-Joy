@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sustainable Joy</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="contact.css">
+
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Get in touch with Sustainable Joy. Scan the QR code to share the form and connect!">
+    <meta name="keywords" content="Sustainable Joy, Contact Form, Community, Giving, Support">
+    <meta name="author" content="Sustainable Joy Team">
+
+    <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Contact Sustainable Joy">
+    <meta property="og:description"
+        content="Scan the QR code to easily share the contact form and connect with Sustainable Joy.">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/QRCodes/contact_qr.png">
+    <meta property="og:image:alt" content="QR Code for Sustainable Joy Contact Form">
+    <meta property="og:url" content="https://your-contact-form-url.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags (for Twitter/X previews) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Sustainable Joy">
+    <meta name="twitter:description"
+        content="Connect with Sustainable Joy. Scan the QR code to share the contact form.">
+    <meta name="twitter:image"
+        content="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/QRCodes/contact_qr.png">
+    <meta name="twitter:image:alt" content="QR Code for Sustainable Joy Contact Form">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+</head>
+
+<body class="bg-[#068E62] text-white flex flex-col items-center p-6 min-h-screen">
+
+    <div class="flip-container w-64 h-64" id="flipCard">
+        <div class="flipper relative w-full h-full">
+            <div class="front flex justify-center items-center w-full h-full" onclick="flipCard()">
+                <img src="https://raw.githubusercontent.com/mullojo/Sustainable-Joy/main/Logos/SUSTAINABLE_JOY.PNG"
+                    class="w-full rounded-lg shadow-lg" alt="Sustainable Joy Logo">
+            </div>
+            <div class="back flex flex-col justify-center items-center w-full h-full bg-white p-4 rounded-lg"
+                onclick="flipCard()">
+                <img src="https://cdn.jsdelivr.net/gh/mullojo/Sustainable-Joy@main/QRCodes/contact_qr.png"
+                    class="w-48 h-48 my-1" alt="QR Code">
+                <p class="text-emerald-700 font-bold text-center">Scan to Share Form</p>
+            </div>
+        </div>
+    </div>
+
+    <form id="contactForm" class="bg-white text-gray-900 p-6 mt-8 w-full max-w-md rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4 text-center text-emerald-700">Contact Information</h2>
+
+        <label class="block text-sm font-semibold">Add Photo</label>
+        <div
+            class="relative w-full flex justify-center items-center border rounded p-2 mb-3 cursor-pointer bg-gray-100">
+            <input type="file" accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer"
+                onchange="previewImage(event)">
+            <span class="text-gray-600">+ Upload Photo</span>
+        </div>
+        <img id="photoPreview" class="rounded-full mx-auto mb-4 hidden">
+
+        <input type="text" placeholder="Name" class="w-full p-3 border rounded mb-3">
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded mb-3">
+        <input type="tel" placeholder="Phone" class="w-full p-3 border rounded mb-3">
+
+        <label class="block text-sm font-semibold">Socials</label>
+        <select id="socialMedia" class="w-full p-2 border rounded mb-3">
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>Facebook</option>
+            <option>LinkedIn</option>
+            <option>GitHub</option>
+        </select>
+        <button type="button" onclick="addSocialHandle()" class="bg-emerald-600 text-white px-3 py-2 rounded mb-3">+ Add
+            Handle</button>
+        <div id="socialHandles" class="mb-3"></div>
+
+        <textarea placeholder="Address or Location" class="w-full p-3 border rounded mb-3"></textarea>
+
+        <label class="block text-sm font-semibold">Interested In</label>
+        <select id="interest" class="w-full p-2 border rounded mb-3" onchange="toggleOther()">
+            <option>Receiving Support</option>
+            <option>Donating Items</option>
+            <option>Event Volunteering</option>
+            <option>Fundraising Help</option>
+            <option>Giving Money</option>
+            <option>Other</option>
+        </select>
+        <input id="otherInterest" type="text" placeholder="Specify Other" class="w-full p-3 border rounded mb-3 hidden">
+
+        <textarea placeholder="What brings you Sustainable Joy?" class="w-full p-3 border rounded mb-3"></textarea>
+
+        <label class="block text-sm font-semibold">Comments / Requests</label>
+        <textarea placeholder="Your comments or special requests" class="w-full p-3 border rounded mb-3"></textarea>
+
+        <label class="block text-sm font-semibold">Contact me via</label>
+        <div class="flex flex-col gap-2 mb-3">
+            <label class="checkbox-container">
+                <input type="checkbox" id="contactEmail"> Email
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="contactText"> Text
+            </label>
+            <label class="checkbox-container">
+                <input type="checkbox" id="contactSocials"> Socials
+            </label>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 text-white p-3 rounded">Save</button>
+    </form>
+    <!-- Link to external JavaScript file -->
+    <script src="contact.js"></script>
+</body>
+
+</html>
